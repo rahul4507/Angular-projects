@@ -1,7 +1,24 @@
-<ul *ngIf="isVisible">
-  <li *ngFor="let item of friendslist">
-    {{ item.name }} is {{ item.age }} years old
-  </li>
-</ul>
+<body style="background-color: {{ backgroundc }}">
+  <ul *ngIf="isVisible">
+    <li *ngFor="let item of friendslist">
+      {{ item.name }} is {{ item.age }} years old
+    </li>
+  </ul>
+  <button (click)="hideList()">Click to Hide List</button>
+  <br />
+  <div *ngIf="isVisible == false">
+    <p>My name is {{ name }}</p>
+    <p>I am {{ age }} years old</p>
+    <p>
+      My address is {{ address.street }},{{ address.city }},{{ address.state }}
+    </p>
+  </div>
 
-<button (click)="hideList()">Click to Hide List</button>
+  <button (click)="changeColor('green')">green</button>
+  <button (click)="changeColor('yellow')">yellow</button>
+  <button (click)="changeColor('blue')">blue</button>
+  <button (click)="changeColor('red')">red</button>
+  <button (click)="changeColor('orange')">orange</button>
+  <button (click)="changeColor('aqua')">aqua</button>
+  <button (click)="changeColor('lightblue')">lightblue</button>
+</body>

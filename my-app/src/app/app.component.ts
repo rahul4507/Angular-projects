@@ -6,7 +6,22 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  name: string = "Rahul";
+  age: number = 25;
+  address: {
+    street: string,
+    city: string,
+    state: string
+  } = {
+      street: '12 Main st',
+      city: 'Hyderabad',
+      state: 'TS'
+  };
   isVisible: boolean = true;
+  backgroundc: string = 'red';
+  changeColor(s: string) {
+    this.backgroundc = s;
+  }
   hideList() {
     this.isVisible = !this.isVisible;
   }
