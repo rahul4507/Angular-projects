@@ -10,6 +10,7 @@ import { YellowComponent } from './yellow/yellow.component';
 import { BlackComponent } from './black/black.component';
 import { WhiteComponent } from './white/white.component';
 import { PinkComponent } from './pink/pink.component';
+import { DirectivesDirective } from './directives.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { PinkComponent } from './pink/pink.component';
     YellowComponent,
     BlackComponent,
     WhiteComponent,
-    PinkComponent
+    PinkComponent,
+    DirectivesDirective
   ],
   imports: [
     BrowserModule

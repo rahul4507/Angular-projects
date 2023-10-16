@@ -1,18 +1,7 @@
-<table>
-  <tr>
-    <td><app-hello-world></app-hello-world></td>
-    <td><app-blue></app-blue></td>
-  </tr>
-  <tr>
-    <td><app-pink></app-pink></td>
-    <td><app-green></app-green></td>
-  </tr>
-  <tr>
-    <td><app-red></app-red></td>
-    <td><app-yellow></app-yellow></td>
-  </tr>
-  <tr>
-    <td><app-black></app-black></td>
-    <td><app-white></app-white></td>
-  </tr>
-</table>
+<ul *ngIf="isVisible">
+  <li *ngFor="let item of friendslist">
+    {{ item.name }} is {{ item.age }} years old
+  </li>
+</ul>
+
+<button (click)="hideList()">Click to Hide List</button>
